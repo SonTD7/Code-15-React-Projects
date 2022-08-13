@@ -3,7 +3,7 @@ import people from "./data";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 
 const Review = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0); //chua hieu lam ne
   const { name, job, image, text } = people[index];
 
   const checkNumber = (number) => {
@@ -30,6 +30,7 @@ const Review = () => {
 
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * people.length);
+    //The Math.floor() function returns the largest integer less than or equal to a given number.
     if (randomNumber === index) {
       randomNumber = index + 1;
     }
